@@ -1,13 +1,12 @@
 (function(ns){
-  var tip = document.querySelector('.hamburguer'),
-      dropdown = document.querySelector('header nav .menu');
+
+  var menu = $('header nav');
 
   var handler = function(e){
-    toggleClass(dropdown, 'open');
-    toggleClass(tip, 'open');
-    return false;
+    e.preventDefault();
+    menu.toggleClass('open');
   };
 
-  addEvent(tip, 'click', handler);
+  $('.hamburguer').on('click', handler);
 
 })(window);

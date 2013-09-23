@@ -1,0 +1,109 @@
+/* Variables and normalize.css */
+/* Colors */
+/* Buttons */
+/* Fonts */
+/* Headings */
+/* Links */
+/* Functions and mixins */
+/*
+
+Functions
+---------
+
+Calculations used by other SCSS files. 
+
+*/
+/* Disabled cursor
+   ----------------
+
+  div.disabled {
+    @include disable-select;
+  }
+
+*/
+/* Forbidden cursor
+   ----------------
+
+  div.forbidden {
+    @include forbidden-select;
+  }
+
+*/
+/* Retina image
+   ------------
+  
+  div.logo {
+    background: url("logo.png") no-repeat;
+    @include image-2x("logo2x.png", 100px, 25px);
+ }
+
+*/
+/* Opacity
+  -------- 
+  
+  .article-heading {
+    @include opacity(0.8);
+  }
+
+*/
+/* Center-align a block level element
+  -----------------------------------
+  
+  .footer-wrap {
+    width: 450px;
+    @include center-block;
+  }
+
+ */
+/* Text overflow
+  --------------
+  
+  .text-truncate {
+    @include text-truncate;
+  }
+
+ */
+/* Absolute positioned
+  --------------------
+
+  .abs {
+    @include abs-pos(10px, 10px, 5px, 15px);
+  }
+
+ */
+/* Font Size
+  ----------
+
+  body {
+    @include font-size(16);
+  }
+
+ */
+/* Text replacement (instead of text-indent)
+  ------------------------------------------
+  
+  .header h1 {
+    @include text-replacement;
+  }
+
+ */
+/* Line Height
+  ------------
+  
+  body {
+    @include line-height (16);
+  }
+
+ */
+/* Placeholder
+  ------------
+
+  input{
+    @include placeholder-color(#FA4A4A)
+  }
+
+ */
+/* Clear inline-block space */
+/* Responsive mixin */
+/* Example @include screen(768, 1280) { background: black; } */
+/* Example: @include min-screen(320) { width: 300px; } */

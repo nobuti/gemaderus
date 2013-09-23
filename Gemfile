@@ -7,13 +7,12 @@ gem 'sinatra-contrib'
 gem 'rack-contrib', :require => 'rack/contrib'
 gem 'thin'
 gem 'foreman'
-
 gem 'json', '~> 1.7.7'
+gem 'rb-fsevent', '~> 0.9'
 
 group :development, :test do
   gem 'guard-livereload'
   gem 'rack-livereload'
-  gem 'guard-compass'
   gem 'guard-jammit'
-  gem 'compass'
+  gem "compass", '~> 0.13.alpha.4'
 end

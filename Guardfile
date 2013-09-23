@@ -1,7 +1,3 @@
-guard 'compass' do
-  watch(%r{stylesheets/.+\.scss})
-end
-
 guard :jammit, :package_on_start => true, :output_folder => "public/assets/" do
   watch(%r{^public/javascripts/(.*)\.js$})
   watch(%r{^public/stylesheets/(.*)\.css$})
