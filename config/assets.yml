@@ -1,0 +1,14 @@
+gzip_assets: on
+
+javascripts:
+  app:
+    - public/javascripts/tire.js
+    - public/javascripts/hamburguer.js
+
+stylesheets:
+  main:
+    - public/stylesheets/style.css
+  blog:
+    - public/stylesheets/blog.css
+  ie8:
+    - public/stylesheets/ie8.css

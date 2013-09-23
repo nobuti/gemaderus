@@ -1,0 +1,15 @@
+.fluid {
+  text-align: justify;
+  
+  &:after {
+      content: "";
+      display: inline-block;
+      width: 100%;    
+  }
+
+  > li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+  }
+}

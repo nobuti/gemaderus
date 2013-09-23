@@ -1,0 +1,23 @@
+a {
+  @include transition(color 0.3s ease-out);
+  color: $orange;
+  outline: none;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.hamburguer {
+  border: none;
+  color: $white;
+  display: none;
+  font-size: 26px;
+  line-height: 1;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  right: 0;
+}
