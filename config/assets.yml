@@ -2,6 +2,7 @@ gzip_assets: on
 
 javascripts:
   app:
+    - public/javascripts/bower_components/modernizr/modernizr.js
     - public/javascripts/tire.js
     - public/javascripts/hamburguer.js
 

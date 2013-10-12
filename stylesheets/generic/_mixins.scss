@@ -203,7 +203,7 @@
 
 @mixin clear-inline-space {
   font-family: sans-serif;
-  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  letter-spacing: -0.32em; /* Webkit: collapse white-space between units */
   *letter-spacing: normal; /* reset IE < 8 */
   *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
 }
