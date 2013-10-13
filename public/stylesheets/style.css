@@ -415,7 +415,7 @@ Calculations used by other SCSS files.
 /* Responsive mixin */
 /* Example @include screen(768, 1280) { background: black; } */
 /* Example: @include min-screen(320) { width: 300px; } */
-header, .claim, .services, .contact {
+header, .claim, .services, .contact, .resume, .resume .column:after, .resume-header:after {
   border-bottom: 1px solid #cccccc; }
 
 header .logo, header nav {
@@ -736,7 +736,8 @@ you can use the generic selector below, but it's slower:
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-top: 0; }
 
 html, body {
   font-family: "museo-sans", Helvetica, sans-serif;
@@ -868,6 +869,7 @@ a:hover {
   border: none;
   color: #ee3805;
   font-size: 32px;
+  line-height: 32px;
   position: absolute;
   text-decoration: none;
   top: 15px;
@@ -876,17 +878,19 @@ a:hover {
   color: #222222;
   text-decoration: none; }
 
-.glyph {
+.glyph, .resume-header .brand-resume {
   -webkit-box-shadow: 0 0 8px #a32603 inset;
   -moz-box-shadow: 0 0 8px #a32603 inset;
   box-shadow: 0 0 8px #a32603 inset;
-  background-color: #ee3805;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
+  background-color: #ee3805;
   color: white;
   height: 50px;
   text-align: center;
   width: 50px; }
-.glyph [class*="icon-"] {
+.glyph [class*="icon-"], .resume-header .brand-resume [class*="icon-"] {
   font-size: 32px;
   line-height: 50px; }
 
@@ -999,6 +1003,8 @@ header nav li a {
     /* on retina, use image that's scaled by 2 */
     background-image: url("/images/background-mobile@2x.jpg");
     background-size: 320px 213px; } }
+.claim.plain {
+  margin-bottom: 0; }
 .claim h1 {
   background-color: #ee3805;
   color: white;
@@ -1053,11 +1059,11 @@ header nav li a {
   .services .media-image {
     margin-bottom: 24px;
     width: 100%; }
-  .services .glyph {
+  .services .glyph, .services .resume-header .brand-resume, .resume-header .services .brand-resume {
     margin: 0 auto;
     height: 100px;
     width: 100px; }
-  .services .glyph [class*="icon-"] {
+  .services .glyph [class*="icon-"], .services .resume-header .brand-resume [class*="icon-"], .resume-header .services .brand-resume [class*="icon-"] {
     font-size: 64px;
     line-height: 100px; }
   .services h4 {
@@ -1094,3 +1100,87 @@ footer .menu li:last-child {
   footer .box {
     width: 960px;
     margin: auto; } }
+
+.resume {
+  padding: 10px; }
+.resume .column:after {
+  content: '';
+  display: block;
+  height: 10px;
+  margin-bottom: 48px;
+  width: 100px; }
+.resume .column.last:after {
+  display: none; }
+.resume p {
+  margin-bottom: 24px; }
+.resume p:last-child {
+  margin-bottom: 0; }
+.resume .block {
+  margin-bottom: 48px; }
+.resume .block:last-child {
+  margin-bottom: 24px; }
+
+@media screen and (min-width: 781px) {
+  .resume {
+    padding: 20px;
+    padding-top: 48px; }
+  .resume .box {
+    margin: 0 auto;
+    width: 960px; }
+  .resume .column {
+    font-family: sans-serif;
+    letter-spacing: -0.32em;
+    /* Webkit: collapse white-space between units */
+    *letter-spacing: normal;
+    /* reset IE < 8 */
+    *word-spacing: -0.43em;
+    /* IE < 8: collapse white-space between units */
+    margin-right: 10%;
+    width: 45%; }
+  .resume .column:after {
+    display: none; }
+  .resume .column:last-child {
+    margin-right: 0; }
+  .resume .column > * {
+    font-family: "museo-sans", Helvetica, sans-serif;
+    letter-spacing: normal;
+    word-spacing: normal; } }
+
+.resume-header {
+  font-family: "museo-sans", Helvetica, sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin: 48px 0;
+  width: 100%; }
+.resume-header:after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin-bottom: 48px;
+  width: 100px; }
+.resume-header .brand-resume, .resume-header .title-resume {
+  display: table-cell;
+  height: 100px;
+  vertical-align: middle; }
+.resume-header .title-resume {
+  padding-left: 20px; }
+.resume-header .brand-resume {
+  text-align: center;
+  width: 100px; }
+.resume-header .links-resume {
+  display: block;
+  margin: 48px 0; }
+.resume-header .me-brand-resume {
+  line-height: 1; }
+@media screen and (min-width: 781px) {
+  .resume-header {
+    margin-top: 0; }
+  .resume-header:after {
+    display: none; }
+  .resume-header .title-resume {
+    padding: 0 40px; }
+  .resume-header .links-resume {
+    display: table-cell;
+    height: 100px;
+    margin: 0;
+    vertical-align: middle; } }

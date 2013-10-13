@@ -720,7 +720,8 @@ you can use the generic selector below, but it's slower:
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin-top: 0; }
 
 html, body {
   font-family: "museo-sans", Helvetica, sans-serif;
@@ -852,6 +853,7 @@ a:hover {
   border: none;
   color: #ee3805;
   font-size: 32px;
+  line-height: 32px;
   position: absolute;
   text-decoration: none;
   top: 15px;

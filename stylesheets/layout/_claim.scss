@@ -7,7 +7,11 @@
   background-repeat: no-repeat;
   padding-bottom: 66%;
   margin-bottom: $base-line-height;
-
+  
+  &.plain {
+    margin-bottom: 0;
+  }
+  
   h1 {
     @extend %museo-light;
     background-color: $orange;

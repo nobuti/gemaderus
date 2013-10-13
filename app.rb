@@ -11,6 +11,11 @@ class App < Sinatra::Application
     erb :index
   end
 
+  get "/resume" do
+    @selected = :curriculum
+    erb :resume
+  end
+
   not_found do
     erb :'404'
   end
