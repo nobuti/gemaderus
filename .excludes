@@ -7,7 +7,7 @@
 log/
 tmp/
 spec/
-assets/
+productionfiles/
 stylesheets/
 README.md
 Guardfile
