@@ -1,0 +1,27 @@
+footer {
+  background-color: $orange;
+  padding: 40px 20px;
+  color: $white;
+
+  [class*="icon-"] {
+    font-size: $base-font-size + 14;
+  }
+
+  .menu {
+    margin-bottom: $base-line-height;
+
+    li {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include min-screen(961px) { 
+    .box {
+      width: 960px;
+      margin: auto;
+    }
+  }
+}

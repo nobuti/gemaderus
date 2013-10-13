@@ -1,0 +1,10 @@
+.contact {
+  @extend %bottom-line;
+  background-color: $grey-lightest;
+  padding: 40px 20px;
+
+  h2 {
+    font-size: $h2-font-size - 4;
+    margin-bottom: $base-line-height + 16;
+  }
+}

@@ -1,0 +1,14 @@
+.glyph {
+  @include box-shadow(0 0 8px darken($orange, 15%) inset);
+  background-color: $orange;
+  border-radius: 50%;
+  color: $white;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+
+  [class*="icon-"] {
+    font-size: 2 * $base-font-size;
+    line-height: 50px;
+  }
+}

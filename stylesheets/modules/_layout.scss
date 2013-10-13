@@ -1,11 +1,16 @@
 * {
-  @include box-sizing(border-box);
+    @include box-sizing(border-box);
+}
+
+html, body {
+    @include museo-regular;
+    line-height: 1.5;
 }
 
 .box {
-  @extend .clearfix;
-  @include center-block;
-  padding: 0 20px;
+    @extend .clearfix;
+    @include center-block;
+    padding: 0 20px;
 }
 
 .row {
@@ -34,15 +39,5 @@
 }
 
 strong {
-  @include museo-bold;
-}
-
-p {
-  @include museo-regular;
-  color: $black;
-  line-height: 1.5;
-  margin-top: 0;
-  &:last-child {
-    margin-bottom: 0;
-  }
+    @include museo-bold;
 }

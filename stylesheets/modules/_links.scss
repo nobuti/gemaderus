@@ -1,4 +1,5 @@
 a {
+  @include museo-regular;
   @include transition(color 0.3s ease-out);
   color: $orange;
   outline: none;
@@ -8,17 +9,28 @@ a {
   }
 }
 
-.hamburguer {
-  @include transition(right 0.2s ease-out);
-  border: none;
-  color: $orange;
-  font-family: sans-serif;
-  font-size: 2 * $base-font-size;
-  position: absolute;
-  text-decoration: none;
-  top: 5px;
-  right: 20px;
+.footer-link {
+  color: $white;
   &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.hamburguer {
+  &, &:active {
+    @include transition(all 0.2s ease-out);
+    @include reset-inline;
+    border: none;
+    color: $orange;
+    font-size: 2 * $base-font-size;
+    position: absolute;
+    text-decoration: none;
+    top: 15px;
+    right: 20px;
+  }
+  &:hover, &:focus {
+    color: $black;
     text-decoration: none;
   }
 }
