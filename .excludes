@@ -8,7 +8,6 @@ log/
 tmp/
 spec/
 assets/
-config/
 stylesheets/
 README.md
 Rakefile
