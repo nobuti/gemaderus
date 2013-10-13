@@ -9,6 +9,7 @@ gem 'thin'
 gem 'foreman'
 gem 'json', '~> 1.7.7'
 gem 'rb-fsevent', '~> 0.9'
+gem 'net-ssh'
 
 group :development, :test do
   gem 'guard-livereload'

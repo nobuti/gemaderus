@@ -466,6 +466,10 @@ Hides an element, normally remove after some user interaction through javascript
 .align-right {
   text-align: right; }
 
+/* Clear last margin-bottom helper */
+.last {
+  margin-bottom: 0; }
+
 /*
 
 Percent

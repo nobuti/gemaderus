@@ -482,6 +482,10 @@ Hides an element, normally remove after some user interaction through javascript
 .align-right {
   text-align: right; }
 
+/* Clear last margin-bottom helper */
+.last {
+  margin-bottom: 0; }
+
 /*
 
 Percent
@@ -1055,7 +1059,8 @@ header nav li a {
   margin-bottom: 0; }
 @media screen and (min-width: 781px) {
   .services .column {
-    width: 30%; }
+    width: 30%;
+    margin-bottom: 0; }
   .services .media-image {
     margin-bottom: 24px;
     width: 100%; }
@@ -1068,10 +1073,7 @@ header nav li a {
     line-height: 100px; }
   .services h4 {
     font-size: 20px;
-    text-align: center; }
-  .services p {
-    font-size: 14px;
-    line-height: 1.5; } }
+    text-align: center; } }
 @media screen and (min-width: 961px) {
   .services .box {
     width: 960px;
@@ -1079,7 +1081,7 @@ header nav li a {
 
 .contact {
   background-color: #f8f8f8;
-  padding: 40px 20px; }
+  padding: 48px 20px; }
 .contact h2 {
   font-size: 20px;
   margin-bottom: 40px; }
