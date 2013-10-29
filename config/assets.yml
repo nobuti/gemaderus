@@ -5,7 +5,9 @@ javascripts:
     - public/javascripts/bower_components/modernizr/modernizr.js
     - public/javascripts/tire.js
     - public/javascripts/hamburguer.js
-
+  modernizr:
+    - public/javascripts/modernizr.js
+    
 stylesheets:
   main:
     - public/stylesheets/style.css

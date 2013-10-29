@@ -4,7 +4,7 @@ class App < Sinatra::Application
 
   before do
     content_type :html, :charset => 'utf-8'
-    cache_control :public, :must_revalidate, :max_age => 60
+    cache_control :public, :must_revalidate, :max_age => 60 if settings.production?
   end
 
   get "/" do

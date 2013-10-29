@@ -107,3 +107,196 @@ Calculations used by other SCSS files.
 /* Responsive mixin */
 /* Example @include screen(768, 1280) { background: black; } */
 /* Example: @include min-screen(320) { width: 300px; } */
+/* Helpers */
+/*
+
+Clearfix
+--------
+
+Micro clearfix, as described [here](nicolasgallagher.com/micro-clearfix-hack).
+Extend the clearfix class with SCSS to avoid the `.clearfix` class appearing
+over and over in your markup.
+
+    <div class="clearfix"></div>
+
+*/
+.clearfix {
+  *zoom: 1 !important; }
+.clearfix:before, .clearfix:after {
+  content: " " !important;
+  display: table !important; }
+.clearfix:after {
+  clear: both !important; }
+
+/*
+
+Is Hidden
+---------
+
+Hides an element, normally remove after some user interaction through javascript.
+
+    <div class="is-hidden">You can't see me!</div>
+
+*/
+.is-hidden {
+  display: none; }
+
+/* Float helpers */
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+/* Text align helpers */
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+/* Clear last margin-bottom helper */
+.last {
+  margin-bottom: 0; }
+
+/*
+
+Percent
+-------
+
+Width in percents for all elements. Supported values are 5%, 10%, 15%, 20%, 25%,
+30%, 35%, 40%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95%, 100%.
+
+    <div class="five percent">5% width</div>
+    <div class="thirty percent">30% width</div>
+
+*/
+.percent.five {
+  width: 5% !important; }
+.percent.ten {
+  width: 10% !important; }
+.percent.fifteen {
+  width: 15% !important; }
+.percent.twenty {
+  width: 20% !important; }
+.percent.twentyfive {
+  width: 25% !important; }
+.percent.thirty {
+  width: 30% !important; }
+.percent.thirtyfive {
+  width: 35% !important; }
+.percent.forty {
+  width: 40% !important; }
+.percent.fortyfive {
+  width: 45% !important; }
+.percent.fifty {
+  width: 50% !important; }
+.percent.fiftyfive {
+  width: 55% !important; }
+.percent.sixty {
+  width: 60% !important; }
+.percent.sixtyfive {
+  width: 65% !important; }
+.percent.seventy {
+  width: 70% !important; }
+.percent.seventyfive {
+  width: 75% !important; }
+.percent.eighty {
+  width: 80% !important; }
+.percent.eightyfive {
+  width: 85% !important; }
+.percent.ninety {
+  width: 90% !important; }
+.percent.ninetyfive {
+  width: 95% !important; }
+.percent.hundred {
+  width: 100% !important; }
+
+.box {
+  width: 960px !important;
+  margin: auto !important; }
+
+.hamburguer {
+  display: none !important; }
+
+header .hamburguer {
+  display: none !important; }
+header nav {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  display: table-cell;
+  height: auto;
+  padding: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  vertical-align: middle;
+  width: 100%; }
+header nav .menu {
+  text-align: right; }
+header nav .menu > li {
+  margin-top: 8px;
+  margin-right: 30px; }
+header nav .menu > li.last {
+  margin-right: 0; }
+header nav .menu > li, header nav .menu > li > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+header nav .menu > li.active > a {
+  color: #ee3805; }
+header nav .menu > li a {
+  font-family: "museo-sans", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #222222;
+  font-size: 15px; }
+header nav .menu > li a:hover, header nav .menu > li a:focus {
+  color: #ee3805; }
+
+.claim {
+  background-image: url("/images/background.jpg");
+  background-position: 0 50%;
+  padding-bottom: 30%; }
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  .claim {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("/images/background@2x.jpg");
+    background-size: 1500px 662px; } }
+.claim h1 {
+  font-family: "museo-sans", Helvetica, sans-serif;
+  font-weight: 300;
+  text-shadow: 0 0 12px #8c8c8c;
+  background-color: transparent;
+  font-size: 44px;
+  margin-top: 12%;
+  text-align: center;
+  width: 100%; }
+
+.services .column {
+  width: 30%;
+  margin-bottom: 0; }
+.services .media-image {
+  margin-bottom: 24px;
+  width: 100%; }
+.services .glyph {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px; }
+.services .glyph [class*="icon-"] {
+  font-size: 64px;
+  line-height: 100px; }
+.services h4 {
+  font-size: 20px;
+  text-align: center; }
+
+.contact {
+  width: 100% !important; }
+
+footer .box {
+  width: 960px;
+  margin: auto; }

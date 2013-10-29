@@ -7,3 +7,117 @@
 @import "generic/functions";
 @import "generic/mixins";
 @import "generic/placeholders";
+
+/* Helpers */
+@import "helpers/helpers";
+@import "helpers/percent";
+
+.box {
+  width: 960px !important;
+  margin: auto !important;
+}
+
+.hamburguer {
+  display: none !important;
+}
+
+header {
+  .hamburguer {
+    display: none !important;
+  }
+  nav {
+    @include box-shadow(none);
+    background-color: transparent;
+    display: table-cell;
+    height: auto;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    vertical-align: middle;
+    width: 100%;
+    
+    .menu {
+      text-align: right;
+
+      > li {
+        margin-top: 8px;
+        margin-right: 30px;
+        &.last {
+          margin-right: 0;
+        }
+
+        &, > a {
+          display:inline-block;
+          *display:inline;
+          zoom:1;
+        }
+        
+        &.active > a {
+          color: $orange;
+        }
+
+        a {
+          @include museo-bold;
+          color: $black;
+          font-size: $base-font-size - 1;
+          &:hover, &:focus {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+.claim {  
+  background-image: url("/images/background.jpg");
+  @include image-2x("/images/background@2x.jpg", 1500px, 662px);
+  background-position: 0 50%;
+  padding-bottom: 30%;
+
+  h1 {
+    @include museo-regular;
+    @include text-shadow(0 0 12px darken($white, 45%));
+    background-color: transparent;
+    font-size: $h1-font-size + 12;
+    margin-top: 12%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.services {
+  .column {
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .media-image {
+    margin-bottom: $base-line-height;
+    width: 100%;
+  }
+  .glyph {
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+
+    [class*="icon-"] {
+      font-size: 4 * $base-font-size;
+      line-height: 100px;
+    }
+  }
+  h4 {
+    font-size: $h4-font-size + 4;
+    text-align: center;
+  }
+}
+.contact {
+  width: 100% !important;
+}
+
+footer {
+  .box {
+    width: 960px;
+    margin: auto;
+  }
+}
